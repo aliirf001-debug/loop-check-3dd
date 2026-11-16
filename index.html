@@ -437,7 +437,7 @@ const UI = {
    CODE_SECRET        : secret used to make offline access codes. CHANGE IT, then make
                         codes with access-code-generator.html using the same secret.        */
 const CONFIG = {
-  BUY_URL: 'https://gumroad.com/',
+  BUY_URL: 'https://wa.me/916264109904?text=I%20want%20to%20pay%2010%20Dollars%20to%20play%20full%20game',
   PRICE_TEXT: 'USD 10',
   GUMROAD_PRODUCT_ID: '',
   CODE_SECRET: 'CHANGE-ME-loopcheck-2026',
@@ -1708,7 +1708,7 @@ function unlockModal(msg) {
   const box = document.createElement('div');
   box.className = 'modal'; box.id = 'unlockModal';
   box.innerHTML = `<div class="mbox info" role="dialog" aria-modal="true"><h3>${t(UI.unlockTitle)}</h3><p>${t(UI.unlockBody)}</p>
-    <a class="btn amber" href="${esc(CONFIG.BUY_URL)}" target="_blank" rel="noopener">${t(UI.buy)} · <span class="n" dir="ltr">${esc(CONFIG.PRICE_TEXT)}</span></a>
+    <a class="btn amber" href="${esc(CONFIG.BUY_URL)}" target="_blank" rel="noopener noreferrer">${t(UI.buy)} · <span class="n" dir="ltr">${esc(CONFIG.PRICE_TEXT)}</span></a>
     <label for="keyIn" class="lbl">${t(UI.keyLabel)}</label><input id="keyIn" class="n" dir="ltr" autocomplete="off" placeholder="LC-XXXXX-XXXXX-XXXX">
     <p id="keyMsg" class="note">${msg || ''}</p>
     <div class="row"><button class="btn" id="keyGo">${t(UI.unlock)}</button><button class="btn ghost" id="keyClose">${t(UI.close)}</button></div>
